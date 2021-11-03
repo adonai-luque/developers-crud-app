@@ -1,11 +1,11 @@
-<%= link_to 'New developer', new_developer_path, class: "btn btn-outline-primary my-3" %>
+<%= link_to 'Nuevo desarrollador', new_developer_path, class: "btn btn-outline-primary my-3" %>
 <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Position</th>
-      <th scope="col">Developer Actions</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Cargo</th>
+      <th scope="col">Acciones</th>
     </tr>
   </thead>
   <tbody>
@@ -15,9 +15,9 @@
         <td><%= developer.name %></td>
         <td><%= developer.position %></td>
         <td>
-          <%= link_to 'Show', developer, class: "btn btn-outline-dark btn-sm m-1" %>
-          <%= link_to "Edit", edit_developer_path(developer), class: "btn btn-outline-dark btn-sm m-1" %>
-          <%= link_to "Delete", developer_path(developer), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger btn-sm m-1"  %>
+          <%= link_to 'Mostrar', developer, class: "btn btn-outline-dark btn-sm m-1" %>
+          <%= link_to "Editar", edit_developer_path(developer), class: "btn btn-outline-dark btn-sm m-1" %>
+          <%= link_to "Borrar", developer_path(developer), method: :delete, data: { confirm: "¿Está seguro?" }, class: "btn btn-outline-danger btn-sm m-1"  %>
         </td>
       </tr>
     <% end %>

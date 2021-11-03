@@ -1,2 +1,8 @@
-<h1>Developers#show</h1>
-<p>Find me in app/views/developers/show.html.erb</p>
+<h1><%= @developer.name %></h1>
+
+<h4>Cargo:</h4>
+<p><%= @developer.position %></p>
+
+<%= link_to "Editar", edit_developer_path(@developer), class: "btn btn-outline-dark" %>
+<%= link_to "Borrar", developer_path(@developer), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger"  %>
+<%= link_to 'Regresar', developers_path, class: "btn btn-outline-dark" %>
