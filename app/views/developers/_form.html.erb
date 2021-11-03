@@ -1,13 +1,13 @@
 <%= form_with model: developer do |form| %>
   <div>
-    <%= form.label :name, class: "form-label" %>
+    <%= form.label :name, "Nombre", class: "form-label" %>
     <%= form.text_field :name, class: "form-control mb-2" %>
     <% developer.errors.full_messages_for(:name).each do |message| %>
       <div class="alert alert-danger p-2"><%= message %></div>
     <% end %>
   </div>
   <div>
-    <%= form.label :position, class: "form-label" %>
+    <%= form.label :position, "Cargo", class: "form-label" %>
     <%= form.text_field :position, class: "form-control mb-2" %>
     <% developer.errors.full_messages_for(:position).each do |message| %>
       <div class="alert alert-danger p-2"><%= message %></div>
