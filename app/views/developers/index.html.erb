@@ -1,2 +1,26 @@
-<h1>Developers#index</h1>
-<p>Find me in app/views/developers/index.html.erb</p>
+<h1>Developers</h1>
+<%= link_to 'New developer', new_developer_path, class: "btn btn-outline-primary my-3" %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Position</th>
+      <th scope="col">Developer Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @developers.each do |developer| %>
+      <tr>
+        <th scope="row"><%= developer.id %></th>
+        <td><%= developer.name %></td>
+        <td><%= developer.position %></td>
+        <td>
+          <%= link_to 'Show', developer, class: "btn btn-outline-dark btn-sm m-1" %>
+          <%= link_to "Edit", edit_developer_path(developer), class: "btn btn-outline-dark btn-sm m-1" %>
+          <%= link_to "Delete", developer_path(developer), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger btn-sm m-1"  %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
