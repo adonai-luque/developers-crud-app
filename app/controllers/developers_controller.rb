@@ -41,4 +41,10 @@ class DevelopersController < ApplicationController
 
     redirect_to developers_path, notice: "Desarrollador eliminado correctamente"
   end
+
+  private
+
+  def developer_params
+    params.require(:developer).permit(:id, :name, :position)
+  end
 end
