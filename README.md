@@ -1,24 +1,5 @@
-# README
+# DEVELOPERS-CRUD-APP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple CRUD app made in Rails to manage a list of developers
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Live version in Heroku!](https://developers-crud-app.herokuapp.com/)
